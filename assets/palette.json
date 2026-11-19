@@ -1,0 +1,17 @@
+{
+  "name": "Grants for Good",
+  "tagline": "Good work, well supported.",
+  "colors": {
+    "forest": "#11362D",
+    "ink": "#163D32",
+    "green": "#28664E",
+    "fresh_green": "#DFED95",
+    "paper": "#F8FAF6",
+    "mark_green": "#265B45",
+    "mark_yellow": "#F2B134"
+  },
+  "type": {
+    "heading": "Georgia, Times New Roman, serif",
+    "body": "system-ui, sans-serif"
+  }
+}

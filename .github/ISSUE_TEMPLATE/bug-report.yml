@@ -1,0 +1,44 @@
+name: Report a GFG problem
+description: Report an application or website bug without sharing private workspace data.
+title: "Bug: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        This issue will be public. Do not include client records, real project names, Drive folder links, account information, credentials, tokens, or confidential screenshots. Use fictional examples. For private requests, contact the workspace owner through your existing private channel.
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did it happen?
+      options:
+        - Installed GFG app
+        - Public website
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version and operating system
+      placeholder: "For example: GFG v0.135.2, Windows 11, Chrome"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: What were you trying to do?
+      description: Describe the steps using a fictional example.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: What happened, and what did you expect?
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Before posting
+      options:
+        - label: I have left out private client information, account details, folder links, and credentials.
+          required: true

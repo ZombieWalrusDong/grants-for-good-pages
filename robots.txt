@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zombiewalrusdong.github.io/grants-for-good-pages/sitemap.xml
