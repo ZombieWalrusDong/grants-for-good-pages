@@ -8,6 +8,8 @@ ROOT = Path(__file__).resolve().parents[1]
 ORIGIN = "https://zombiewalrusdong.github.io/grants-for-good-pages/"
 REPOSITORY = "https://github.com/ZombieWalrusDong/grants-for-good-pages"
 VERSION = "0.135.2"
+# Public ownership marker supplied by Google Search Console. Keep it in rebuilds.
+SITE_VERIFICATION = "exVe3m--pk4O2DmMybffQ9GEmMD_T4lDK_XxtmUCMTI"
 
 
 def wordmark():
@@ -19,7 +21,7 @@ def page(filename, title, description, body, active=""):
     links = ''.join(f'<a href="{url}"'+(' aria-current="page"' if active == url else '')+f'>{label}</a>' for url,label in navigation)
     full_title = "Grants for Good — Good work, well supported." if filename == "index.html" else title + " · Grants for Good"
     html = f'''<!doctype html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">{'<meta name="google-site-verification" content="'+SITE_VERIFICATION+'">' if filename == "index.html" else ""}
 {'<base href="'+ORIGIN+'">' if filename == "404.html" else ""}<title>{escape(full_title)}</title><meta name="description" content="{escape(description, quote=True)}">
 <meta name="theme-color" content="#163d32"><link rel="canonical" href="{ORIGIN}{filename if filename != 'index.html' else ''}">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Grants for Good"><meta property="og:title" content="{escape(full_title, quote=True)}"><meta property="og:description" content="{escape(description, quote=True)}"><meta property="og:url" content="{ORIGIN}{filename if filename != 'index.html' else ''}"><meta property="og:image" content="{ORIGIN}assets/social-card.png"><meta property="og:image:alt" content="Grants for Good. Good work, well supported.">

@@ -15,6 +15,8 @@ This repository contains public website assets and **fictional** product illustr
 
 GitHub Pages publishes the root of `main`, matching the separate HOARD.R public-pages setup. `.nojekyll` keeps this a buildless static site. No analytics, external fonts, account creation, or backend service is used.
 
+The homepage includes a public Google Search Console ownership marker. Keep it in `tools/build_site.py` so a rebuild preserves site ownership verification used by the Google OAuth branding checks. It is not an OAuth credential or an analytics tag.
+
 ## Scope
 
 Publishing this website does not publish the application source, provide a public hosted workspace, change Google OAuth production/verification settings, or release version 1.0. The current beta version named on these pages is v0.135.2 (November 18, 2026).
